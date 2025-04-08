@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Restaurante Darío</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80'); /* fondo comida */
+      font-family: 'Playfair Display', serif;
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80'); /* Fondo comida */
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -15,17 +16,23 @@
       padding: 0;
     }
 
-    /* Fondo semitransparente más oscuro para legibilidad */
     .contenido {
-      background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+      background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+      color: white;
       padding-bottom: 30px;
     }
 
     header {
-      background-color: rgba(168, 50, 50, 0.9); /* Rojo semitransparente */
+      background-color: rgba(168, 50, 50, 0.9);
       color: white;
       padding: 30px 20px;
       text-align: center;
+    }
+
+    h1 {
+      font-family: 'Lobster', cursive;
+      margin: 0;
+      font-size: 2.5em;
     }
 
     .bienvenida {
@@ -83,7 +90,7 @@
     }
 
     footer {
-      background-color: rgba(168, 50, 50, 0.9); /* Rojo semitransparente */
+      background-color: rgba(168, 50, 50, 0.9);
       color: white;
       text-align: center;
       padding: 10px;
@@ -92,6 +99,79 @@
     img {
       max-width: 100%;
       height: auto;
+    }
+
+    a:hover {
+      color: #a83232;
+      text-decoration: underline;
+    }
+
+    .btn-pedido, .btn-reserva {
+      background-color: #a83232;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .btn-pedido:hover, .btn-reserva:hover {
+      background-color: #d68f2d;
+    }
+
+    .carrusel {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .slide {
+      min-width: 100%;
+      transition: transform 0.5s ease;
+    }
+
+    .carrusel:hover .slide {
+      transform: scale(1.05);
+    }
+
+    .testimonios {
+      background-color: #f4e1d2;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .testimonial {
+      margin: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .testimonial p {
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 14px;
+      }
+      
+      header img {
+        width: 100%;
+        height: auto;
+      }
+
+      .menu ul {
+        width: 100%;
+      }
+
+      .menu li {
+        font-size: 1em;
+      }
     }
   </style>
 </head>
@@ -104,7 +184,7 @@
 
   <section class="bienvenida">
     <p>¡Bienvenidos a Restaurante Darío!</p>
-    <p><strong><em>Cocina casera, sabor tradicional y un ambiente acogedor.</em></strong></p>
+    <p>Cocina casera, sabor tradicional y un ambiente acogedor.</p>
   </section>
 
   <section class="info-extra">
@@ -116,10 +196,10 @@
   <section class="menu">
     <h2>Menú</h2>
     <ul>
-      <li><strong>Paella Valenciana</strong> - 12,50 €</li>
-      <li><strong>Pizzas Peperoni</strong> - 9,80 €</li>
-      <li><strong>Ensalada mixta</strong> - 6,00 €</li>
-      <li><strong>Tarta casera</strong> - 4,00 €</li>
+      <li><i class="fas fa-pizza-slice"></i> <strong>Paella Valenciana</strong> - 12,50 €</li>
+      <li><i class="fas fa-pizza-slice"></i> <strong>Pizzas Peperoni</strong> - 9,80 €</li>
+      <li><i class="fas fa-leaf"></i> <strong>Ensalada mixta</strong> - 6,00 €</li>
+      <li><i class="fas fa-cake"></i> <strong>Tarta casera</strong> - 4,00 €</li>
     </ul>
   </section>
 
