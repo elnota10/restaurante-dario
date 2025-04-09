@@ -44,7 +44,7 @@
       font-size: 1.8em;
       font-weight: bold;
       font-family: 'Georgia', serif;
-      color: #a83232;
+      color: #1e90ff; /* Color azul */
       text-shadow: 1px 1px 2px #ddd;
     }
 
@@ -68,8 +68,20 @@
 
     .menu h2 {
       text-align: center;
-      font-size: 2.5em;
-      color: #a83232;
+      font-size: 3.5em;
+      font-family: 'Lobster', cursive; /* Estilo especial para "Menú" */
+      color: #003366; /* Azul oscuro */
+      text-decoration: underline;
+      text-underline-position: under;
+      letter-spacing: 2px;
+      margin: 20px 0;
+    }
+
+    .menu h3 {
+      text-align: center;
+      font-size: 2.2em;
+      color: #a83232; /* Rojo */
+      font-weight: bold;
     }
 
     .menu ul {
@@ -95,7 +107,7 @@
     .menu li i {
       margin-right: 15px;
       font-size: 1.5em;
-      color: #a83232;
+      color: #003366;
     }
 
     .contacto {
@@ -121,7 +133,7 @@
     }
 
     a:hover {
-      color: #a83232;
+      color: #003366;
       text-decoration: underline;
     }
 
@@ -174,11 +186,22 @@
       font-style: italic;
     }
 
+    /* Flexbox para alinear Comidas y Menú Infantil, Bebidas y Postres */
+    .menu-items {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .menu-items div {
+      width: 48%;
+    }
+
     @media (max-width: 768px) {
       body {
         font-size: 14px;
       }
-      
+
       header img {
         width: 100%;
         height: auto;
@@ -190,6 +213,16 @@
 
       .menu li {
         font-size: 1.2em;
+      }
+
+      .menu-items {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-items div {
+        width: 100%;
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -214,25 +247,63 @@
 
   <section class="menu">
     <h2>Menú</h2>
-    <ul>
-      <li><i class="fas fa-pizza-slice"></i> <strong>Paella Valenciana</strong> 12,50 €</li>
-      <li><i class="fas fa-pizza-slice"></i> <strong>Pizzas Peperoni</strong> 9,80 €</li>
-      <li><i class="fas fa-leaf"></i> <strong>Ensalada mixta</strong> 6,00 €</li>
-      <li><i class="fas fa-cake"></i> <strong>Tarta casera</strong> 4,00 €</li>
-    </ul>
+    <div class="menu-items">
+      <div>
+        <h3>Comidas</h3>
+        <ul>
+          <li><strong>Hamburguesa</strong><span> 5,00 €</span></li>
+          <li><strong>Pepito</strong><span> 8,50 €</span></li>
+          <li><strong>Sándwich con jamón</strong><span> 4,50 €</span></li>
+          <li><strong>Sándwich con Jamón York</strong><span> 4,80 €</span></li>
+          <li><strong>Sándwich mixto</strong><span> 4,60 €</span></li>
+          <li><strong>Pizza</strong><span> 7,50 €</span></li>
+          <li><strong>Pollo</strong><span> 6,00 €</span></li>
+          <li><strong>Patatas fritas</strong><span> 3,00 €</span></li>
+          <li><strong>Macarrones con tomate</strong><span> 5,50 €</span></li>
+          <li><strong>Ensalada</strong><span> 4,00 €</span></li>
+          <li><strong>Huevos fritos</strong><span> 4,20 €</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Menú Infantil</h3>
+        <ul>
+          <li><strong>Hamburguesa</strong><span> 4,00 €</span></li>
+          <li><strong>Patatas fritas</strong><span> 2,50 €</span></li>
+          <li><strong>Pepsi</strong><span> 1,50 €</span></li>
+          <li><strong>Postre</strong><span> 1,20 €</span></li>
+          <li><strong>Regalo sorpresa</strong><span> 0,80 €</span></li>
+        </ul>
+
+        <h3>Bebidas</h3>
+        <ul>
+          <li><strong>Pepsi</strong><span> 1,50 €</span></li>
+          <li><strong>Fanta Naranja</strong><span> 1,50 €</span></li>
+          <li><strong>Leche</strong><span> 1,20 €</span></li>
+        </ul>
+
+        <h3>Postres</h3>
+        <ul>
+          <li><strong>Arroz con leche</strong><span> 2,00 €</span></li>
+          <li><strong>Plátano</strong><span> 1,00 €</span></li>
+          <li><strong>Manzana Naranja</strong><span> 1,50 €</span></li>
+          <li><strong>Yogurt</strong><span> 1,00 €</span></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="contacto">
-    <h2>Contacto</h2>
-    <p>📍 Calle Montevideo 4 7b, Huelva</p>
-    <p>📞 123 456 789</p>
-    <p>📧 dariobarranco@outlook.es</p>
+    <p>¡Haz tu pedido ahora!</p>
+    <p>Contáctanos al: 620456198 o 959467514</p>
+    <a href="tel:620456198" class="btn-pedido">Realizar Pedido</a>
+    <a href="tel:959467514" class="btn-reserva">Reservar Mesa</a>
   </section>
-
-  <footer>
-    <p>&copy; 2025 Restaurante Darío. Todos los derechos reservados.</p>
-  </footer>
 </div>
+
+<footer>
+  <p>&copy; 2025 Restaurante Darío. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>
